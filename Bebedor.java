@@ -16,38 +16,41 @@ public class Bebedor
    {       
        sangre= 0;
        this.limite=limite;        
-    }  
+    } 
     
-   public void beberCopa(Cubata copa)
+   /**
+    * Elige bebida y los ml que va a tomar de ella.
+    */ 
+   public void beberCopa(Cubata copa, int ml)
    {
-       if (sangre<=limite)
-       {
-      sangre = sangre + copa.getAlcohol();
-    }
-       else
-       {
-           System.out.println("No tíos que me va dar algo si bebo más");
+           if (sangre<=limite)
+           {
+          sangre = sangre + (copa.getGraduacion()/100)*ml;
         }
+           else
+           {
+               System.out.println("No, ya estoy borracho :)");
+            }
     }
    
     
     public void preguntar(String pregunta)
     {       
-        if(!(sangre>=limite)) 
-    {       
-        if (pregunta.length()%2==0)
-        {
-            System.out.println("Si");
+            if(!(sangre>=limite)) 
+        {       
+            if (pregunta.length()%2==0)
+            {
+                System.out.println("Si");
+            }
+            else
+            {
+                System.out.println("No");
+            }
         }
         else
         {
-            System.out.println("No");
+            System.out.println(pregunta.toUpperCase());
         }
-    }
-    else
-    {
-        System.out.println(pregunta.toUpperCase());
-    }
     }
     }
     

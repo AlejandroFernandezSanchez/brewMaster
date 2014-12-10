@@ -7,16 +7,18 @@
  */
 public class Cubata
 {
-  private int alcohol;
-  
-  public Cubata(int alcohol)
+  private int graduacion;
+  /**
+   * Graduacion (sin decimales, redondeado a la unidad inferior)
+   */
+  public Cubata(int graduacion)
   {
-      this.alcohol=alcohol;
+      this.graduacion=graduacion;
   }
   
-  public int getAlcohol()
+  public int getGraduacion()
   {
-      return alcohol;
+      return graduacion;
     }
 
 }
